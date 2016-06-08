@@ -9,12 +9,29 @@
  * @author Aula
  */
 public class CuentaBancaria {
-    public int numero;
-    public String nombre;
-    public double saldo;
+    private int numero;
+    private String nombre;
+    private double saldo;
     
-    public CuentaBancaria(){
-        System.out.println("LLAMANDO CONSTRUCTOR...");
-        saldo = 0;
+    
+    public CuentaBancaria(int numero, String nombre, double sal){
+        System.out.println("LLAMANDO CONSTRUCTOR de 3");
+        this.numero = numero;
+        this.nombre = nombre;
+        this.saldo = sal;
     }
+    
+    public CuentaBancaria(int n, String no){
+        this(n,no,0);
+        System.out.println("LLAMANDO CONSTRUCTOR DE 2");
+    }
+    
+    public void setSaldo(double s){
+        saldo += s;
+    }
+    
+    public void print(){
+        System.out.println(numero+"-"+nombre+"-"+saldo);
+    }
+    
 }

@@ -10,25 +10,24 @@
  */
 public class Ficohsa {
     public static void main(String[] args) {
-        CuentaBancaria cb = new CuentaBancaria();
-        System.out.println(cb.saldo);
+        CuentaBancaria cb = new CuentaBancaria(15,"Monique");
+        CuentaBancaria cb2 = new CuentaBancaria(10,"Mae");
         
-        //op numero, nombre
-        cb.numero = 1;
-        cb.nombre = "carlos";
+        //System.out.println(cb.saldo);
         
         //depositen
         double monto = 562.9;
-        cb.saldo += monto;
+        cb.setSaldo(monto);
         
-        //retiren
-        monto = 300;
-        if(cb.saldo >= monto){
-            cb.saldo -= monto;
-        }
+//        //retiren
+//        monto = 300;
+//        if(cb.saldo >= monto){
+//            cb.saldo -= monto;
+//        }
         
         //imprimir la cuenta
-        System.out.println(cb.numero+"-"+cb.nombre+"-"+
-                cb.saldo);
+        cb.print();
+        cb2.print();
+        
     }
 }

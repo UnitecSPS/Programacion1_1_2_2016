@@ -15,5 +15,7 @@ public class Unitec {
         if(al.nombre.equals("Erick")){
             System.out.println("Si es Erick");
         }
+        
+        //prueben las funciones hechas
     }
 }

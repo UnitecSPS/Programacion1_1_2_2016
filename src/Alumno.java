@@ -19,6 +19,10 @@ public class Alumno {
     }
     
     
+    //funciones set para nombre y genero
+    
+    //print que imprima todos sus atributos
+    
     
     
 }
