@@ -13,20 +13,22 @@ public class Ficohsa {
         CuentaBancaria cb = new CuentaBancaria(15,"Monique");
         CuentaBancaria cb2 = new CuentaBancaria(10,"Mae");
         
-        //System.out.println(cb.saldo);
+        System.out.println(cb.getSaldo());
         
         //depositen
         double monto = 562.9;
-        cb.setSaldo(monto);
+        cb.depositar(monto);
         
-//        //retiren
-//        monto = 300;
-//        if(cb.saldo >= monto){
-//            cb.saldo -= monto;
-//        }
+        //retiren
+        if(cb.retirar(300)){
+            System.out.println("Se retiro");
+        }
         
         //imprimir la cuenta
         cb.print();
+        
+        String n = cb2.getNombre();
+        System.out.println("Imprimiendo a "+n);
         cb2.print();
         
     }
