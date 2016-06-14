@@ -29,6 +29,8 @@ public class CuentaBancaria {
     }
     
     public void depositar(double s){
+        if(s < 0)
+            return;
         saldo += s;
     }
     
