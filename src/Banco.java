@@ -9,6 +9,7 @@
  * @author Aula
  */
 public class Banco {
+    public static int VERSION_BANCARIA=1;
     private String nombre;
     private CuentaBancaria cuentas[];
     
@@ -16,8 +17,14 @@ public class Banco {
         nombre = n;
         cuentas = new CuentaBancaria[max];
     }
+    
+    public static void aumentarVersion(){
+        VERSION_BANCARIA++;
+        //getNombre();
+    }
 
     public String getNombre() {
+        //VERSION_BANCARIA++;
         return nombre;
     }
 
