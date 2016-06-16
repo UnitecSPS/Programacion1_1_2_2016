@@ -48,6 +48,11 @@ public class Banco {
      *  existe retornan -1
      */
     public int searchCuenta(int n){
+        for(int p=0;p<cuentas.length;p++){
+            if(cuentas[p] != null && cuentas[p].getNumero() == n){
+                return p;
+            }
+        }
         return -1;
     }
     
@@ -61,6 +66,29 @@ public class Banco {
      * @return true si lo pude guardar o false si no
      */
     public boolean addCuenta(int n,String no){
+        if(searchCuenta(n) == -1){
+            for(int p=0; p < cuentas.length; p++){
+                if(cuentas[p] == null){
+                    cuentas[p] = new CuentaBancaria(n,no);
+                    return true;
+                }
+            }
+            System.out.println("Ya esta lleno el arreglo");
+        }
+        else{
+            System.out.println("Numero Repetido");
+        }
+        
         return false;
+    }
+    
+    /**
+     * 1- Buscar que esa cuenta con ese numero exista
+     * 2- Si existe, depositan ese monto a esa cuenta
+     * @param n Numero de la Cuenta
+     * @param m Monto a depositar
+     */
+    public void depositarEnCuenta(int n, double m){
+        
     }
 }
