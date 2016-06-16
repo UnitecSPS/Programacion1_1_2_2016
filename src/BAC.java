@@ -27,7 +27,8 @@ public class BAC {
             System.out.println("2- Listar Cuentas");
             System.out.println("3- Depositar en una cuenta");
             System.out.println("4- Retirar de una cuenta");
-            System.out.println("5- Salir");
+            System.out.println("5- Transferir");
+            System.out.println("6- Salir");
             System.out.print("Escoja opcion: ");
             op = lea.nextInt();
             
@@ -38,8 +39,11 @@ public class BAC {
                 case 2:
                     banco.printCuentas();
                     break;
+                case 3:
+                    depositar();
+                    break;
             }
-        }while(op!=5);
+        }while(op!=6);
 
     }
 
@@ -55,5 +59,14 @@ public class BAC {
         else{
             System.out.println("Apertura fallo");
         }
+    }
+
+    private static void depositar() {
+        System.out.print("Numero: ");
+        int n = lea.nextInt();
+        System.out.print("Monto: ");
+        double m = lea.nextDouble();
+        
+        banco.depositarEnCuenta(n, m);
     }
 }

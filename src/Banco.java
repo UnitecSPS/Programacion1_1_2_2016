@@ -89,6 +89,34 @@ public class Banco {
      * @param m Monto a depositar
      */
     public void depositarEnCuenta(int n, double m){
-        
+        int pos = searchCuenta(n);
+        if(pos >= 0){
+            cuentas[pos].depositar(m);
+        }
+    }
+    
+    /**
+     * 1- Buscar que esa cuenta con ese numero exista
+     * 2- Si existe, se intenta retirar.
+     * 3- Se retorna true si pude retirar o no
+     * @param n Numero de la Cuenta
+     * @param m Monto a retirar
+     * @return true si pude retirar o no
+     */
+    public boolean retirarEnCuenta(int n, double m){
+        return false;
+    }
+    
+    /**
+     * 1- Buscar que la cuenta de origen y la de destino existan
+     * 2- Si puedo retirar de la cuenta de origen, deposito en la
+     *  cuenta de destino
+     * @param no Numero de la Cuenta de Origen
+     * @param nd Numero de la cuenta de Destino
+     * @param m Monto a transferir
+     * @return true si pude transferir o no
+     */
+    public boolean transferir(int no, int nd, double m){
+        return false;
     }
 }
